@@ -22,23 +22,23 @@ export const Counter = () => {
     return format((time() % (1000 * 60)) / 1000)
   }
   const hundredths = () => {
-    return format(time() % 100)
+    return format((time() % 1000) / 10)
   }
 
   return (
     <p class="font-['Chakra_Petch'] font-medium text-4xl flex items-center gap-x-1_ text-center *:w-6 select-none">
       <span>{days()[0]}</span>
       <span>{days()[1]}</span>
-      <span class=" text-sky-500/40">:</span>
+      <span class="text-sky-500/40">:</span>
       <span>{hours()[0]}</span>
       <span>{hours()[1]}</span>
-      <span class=" text-sky-500/40">:</span>
+      <span class="text-sky-500/40">:</span>
       <span>{minutes()[0]}</span>
       <span>{minutes()[1]}</span>
-      <span class=" text-sky-500/40">:</span>
+      <span class="text-sky-500/40">:</span>
       <span>{seconds()[0]}</span>
       <span>{seconds()[1]}</span>
-      <span class=" text-sky-500/40">:</span>
+      <span class="text-sky-500/40">:</span>
       <span>{hundredths()[0]}</span>
       <span>{hundredths()[1]}</span>
     </p>
